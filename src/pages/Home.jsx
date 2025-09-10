@@ -1,4 +1,4 @@
-import coffee from '../assets/macchiato.png'
+import coffee from "../assets/macchiato.png";
 import Masonry from "../Masonry";
 
 const items = [
@@ -30,38 +30,45 @@ const items = [
 ];
 
 function Home() {
-    return (
-    <div className="text-3xl text-black border-3 min-h-screen flex flex-col p-5 gap-5">
-        <div className='flex items-center justify-between'>
-            <div>
-                <img src={coffee} className='rounded-full h-[60px]'/>
-            </div>
-            <div>
-                <h1>Home</h1>
-            </div>
-            <div className='text-lg'>
-                Logout
-            </div>
+  return (
+    <div className="min-h-screen flex flex-col p-5 gap-5 bg-gradient-to-br from-[#E673AC] via-white to-[#469110]/20">
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <img
+            src={coffee}
+            className="rounded-full h-[60px] border-2 border-[#469110]"
+          />
         </div>
-        <div className=' flex justify-center'>
-            <button className='self-center rounded-4xl px-20 text-2xl py-2 font-medium text-slate-200 bg-[#384959]'>Snap a photo</button>
+        <div>
+          <h1 className="text-3xl font-extrabold text-[#469110] drop-shadow">
+            Home
+          </h1>
         </div>
-        <div className='flex flex-col gap-5 text-slate-700 font-bold'>
-            <h1>Today😝</h1>
-            <Masonry
-            items={items}
-            ease="power3.out"
-            duration={0.6}
-            stagger={0.05}
-            animateFrom="bottom"
-            scaleOnHover={true}
-            hoverScale={0.95}
-            blurToFocus={true}
-            colorShiftOnHover={false}
-            />
+        <div className="text-lg text-[#469110] font-semibold cursor-pointer hover:text-[#00520A] transition">
+          Logout
         </div>
+      </div>
+      <div className="flex justify-center mb-6">
+        <button className="rounded-full px-10 text-2xl py-2 font-bold text-white bg-[#469110] hover:bg-[#00520A] shadow-lg transition">
+          Snap a photo
+        </button>
+      </div>
+      <div className="flex flex-col gap-5 text-[#660033] font-bold">
+        <h1 className="text-2xl mb-2">Today 😝</h1>
+        <Masonry
+          items={items}
+          ease="power3.out"
+          duration={0.6}
+          stagger={0.05}
+          animateFrom="bottom"
+          scaleOnHover={true}
+          hoverScale={0.95}
+          blurToFocus={true}
+          colorShiftOnHover={false}
+        />
+      </div>
     </div>
-)
+  );
 }
 
-export default Home
+export default Home;
