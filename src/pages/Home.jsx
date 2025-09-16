@@ -1,5 +1,5 @@
 import coffee from "../assets/macchiato.png";
-import Masonry from "../Masonry";
+import MasonryGallery from "../components/MasonryGallery";
 
 const items = [
   {
@@ -26,46 +26,73 @@ const items = [
     url: "https://example.com/three",
     height: 250,
   },
+  {
+    id: "4",
+    img: "https://picsum.photos/id/1020/600/800?grayscale",
+    url: "https://example.com/three",
+    height: 250,
+  },
+  {
+    id: "4",
+    img: "https://picsum.photos/id/1020/600/800?grayscale",
+    url: "https://example.com/three",
+    height: 250,
+  },
   // ... more items
 ];
 
 function Home() {
   return (
-    <div className="min-h-screen flex flex-col p-5 gap-5 bg-gradient-to-br from-[#E673AC] via-white to-[#469110]/20">
+    <div className="min-h-screen flex flex-col p-5 pb-24 gap-4\3 bg-[#22023a]">
+      {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <img
             src={coffee}
-            className="rounded-full h-[60px] border-2 border-[#469110]"
+            className="rounded-full h-[60px] border-4 border-[#E673AC] shadow-lg bg-white/60"
+            alt="Profile"
           />
         </div>
-        <div>
-          <h1 className="text-3xl font-extrabold text-[#469110] drop-shadow">
-            Home
+        <div className="flex flex-col items-center">
+          <h1 className="text-3xl font-bold text-[#E673AC] drop-shadow tracking-wide">
+            Welcome!
           </h1>
+          <span className="text-base text-[#a06b9a] font-medium mt-1">
+            Have a beautiful day ✨
+          </span>
         </div>
-        <div className="text-lg text-[#469110] font-semibold cursor-pointer hover:text-[#00520A] transition">
+        <div className="text-lg text-[#E673AC] font-semibold cursor-pointer hover:text-[#22023a] hover:bg-[#E673AC]/20 px-4 py-2 rounded-full transition border border-[#E673AC]/30 shadow-sm">
           Logout
         </div>
       </div>
-      <div className="flex justify-center mb-6">
-        <button className="rounded-full px-10 text-2xl py-2 font-bold text-white bg-[#469110] hover:bg-[#00520A] shadow-lg transition">
+
+      {/* Snap Button */}
+      <div className="flex justify-center mb-4">
+        <button className="flex items-center gap-2 rounded-xl px-8 text-xl py-2 font-bold text-white hover:from-[#d95b9c] hover:to-[#fbeaff] shadow-xl transition border-2 border-[#E673AC]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6 text-white"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 10.5V6.75A2.25 2.25 0 0013.5 4.5h-3A2.25 2.25 0 008.25 6.75v3.75m7.5 0h-7.5m7.5 0v6.75A2.25 2.25 0 0113.5 19.5h-3A2.25 2.25 0 018.25 17.25V10.5m7.5 0h-7.5"
+            />
+          </svg>
           Snap a photo
         </button>
       </div>
-      <div className="flex flex-col gap-5 text-[#660033] font-bold">
-        <h1 className="text-2xl mb-2">Today 😝</h1>
-        <Masonry
-          items={items}
-          ease="power3.out"
-          duration={0.6}
-          stagger={0.05}
-          animateFrom="bottom"
-          scaleOnHover={true}
-          hoverScale={0.95}
-          blurToFocus={true}
-          colorShiftOnHover={false}
-        />
+
+      {/* Gallery Section */}
+      <div className="flex flex-col gap-4 items-center">
+        <h1 className="text-2xl font-bold text-[#E673AC] mb-1">
+          Today's Snaps
+        </h1>
+        <MasonryGallery items={items} />
       </div>
     </div>
   );

@@ -3,55 +3,13 @@ import { GoHome, GoHomeFill } from "react-icons/go";
 import { BsCalendar2Event, BsCalendar2EventFill } from "react-icons/bs";
 import { IoImagesOutline, IoImages } from "react-icons/io5";
 import { TbJewishStar, TbJewishStarFilled } from "react-icons/tb";
+import { IoChatbubbleEllipsesOutline, IoChatbubbleEllipsesSharp  } from "react-icons/io5";
+
 
 function Navigation() {
   return (
     <div className="items-center">
-      {/* <nav className="fixed bottom-0 z-1 flex justify-between w-full p-3 pb-5 pt-5 bg-[#6A89A7] text-black font-medium">
-        <NavLink to="/" className="flex flex-col items-center">
-          {({ isActive }) => (
-            <>
-              {isActive ? (
-                <GoHomeFill size={30} className="text-[#482034]" />
-              ) : (
-                <GoHome size={30} />
-              )}
-              <span
-                className={
-                  isActive ? "text-[#482034] text-sm" : "text-black text-sm"
-                }
-              >
-                Home
-              </span>
-            </>
-          )}
-        </NavLink>
-        <NavLink to="/events" className="flex flex-col items-center">
-          {({ isActive }) => (
-            <>
-              {isActive ? (
-                <BsCalendar2EventFill size={30} className="text-[#482034]" />
-              ) : (
-                <BsCalendar2Event size={30} />
-              )}
-              <span
-                className={
-                  isActive ? "text-[#482034] text-sm" : "text-black text-sm"
-                }
-              >
-                Events
-              </span>
-            </>
-          )}
-        </NavLink>
-        <NavLink to="/memories" className="flex flex-col items-center">
-          {({ isActive }) => (
-            <>
-              {isActive ? (
-                <IoImages size={30} className="text-[#482034]" />
-              ) : (
-                <IoImagesOutline size={30} /> */}
-      <nav className="fixed bottom-0 z-10 flex justify-between w-full p-3 pb-5 pt-5 bg-[#660033] text-white font-medium shadow-2xl">
+      <nav className="fixed bottom-0 z-1 flex justify-between w-full py-3 items-center bg-[#22023a] text-white font-medium shadow-2xl">
         <NavLink
           to="/"
           className="flex flex-col items-center flex-1"
@@ -60,9 +18,9 @@ function Navigation() {
           {({ isActive }) => (
             <>
               {isActive ? (
-                <GoHomeFill size={28} className="text-[#E673AC]" />
+                <GoHomeFill size={26} className="text-[#E673AC]" />
               ) : (
-                <GoHome size={28} />
+                <GoHome size={26} />
               )}
               <span
                 className={
@@ -84,9 +42,9 @@ function Navigation() {
           {({ isActive }) => (
             <>
               {isActive ? (
-                <BsCalendar2EventFill size={28} className="text-[#E673AC]" />
+                <BsCalendar2EventFill size={24} className="text-[#E673AC]" />
               ) : (
-                <BsCalendar2Event size={28} />
+                <BsCalendar2Event size={24} />
               )}
               <span
                 className={
@@ -101,6 +59,33 @@ function Navigation() {
           )}
         </NavLink>
         <NavLink
+          to="/chats"
+          className="flex flex-col items-center flex-1"
+          style={{ minWidth: 0 }}
+        >
+          {({ isActive }) => (
+            <>
+              {isActive ? (
+                <IoChatbubbleEllipsesSharp
+                  size={24}
+                  className="text-[#E673AC]"
+                />
+              ) : (
+                <IoChatbubbleEllipsesOutline size={24} />
+              )}
+              <span
+                className={
+                  isActive
+                    ? "text-[#E673AC] text-xs font-bold"
+                    : "text-white text-xs"
+                }
+              >
+                Chats
+              </span>
+            </>
+          )}
+        </NavLink>
+        <NavLink
           to="/memories"
           className="flex flex-col items-center flex-1"
           style={{ minWidth: 0 }}
@@ -108,9 +93,9 @@ function Navigation() {
           {({ isActive }) => (
             <>
               {isActive ? (
-                <IoImages size={28} className="text-[#E673AC]" />
+                <IoImages size={24} className="text-[#E673AC]" />
               ) : (
-                <IoImagesOutline size={28} />
+                <IoImagesOutline size={24} />
               )}
               <span
                 className={
@@ -132,9 +117,9 @@ function Navigation() {
           {({ isActive }) => (
             <>
               {isActive ? (
-                <TbJewishStarFilled size={28} className="text-[#E673AC]" />
+                <TbJewishStarFilled size={24} className="text-[#E673AC]" />
               ) : (
-                <TbJewishStar size={28} />
+                <TbJewishStar size={24} />
               )}
               <span
                 className={

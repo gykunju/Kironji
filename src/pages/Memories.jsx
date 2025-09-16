@@ -53,34 +53,31 @@ function Memories() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col p-5 gap-10 bg-gradient-to-br from-[#E673AC] via-white to-[#469110]/20">
+    <div className="min-h-screen flex flex-col pb-24 p-6 gap-3 bg-[#22023a]">
       <div className="flex justify-center items-center mb-6">
-        <h1 className="text-3xl font-extrabold text-[#469110] text-center drop-shadow">
+        <h1 className="text-3xl font-bold text-[#E673AC] text-center drop-shadow">
           Memories
         </h1>
-        <button className="ml-4 px-4 py-2 rounded-full bg-[#469110] text-white font-bold hover:bg-[#00520A] shadow transition">
+        <button className="ml-4 absolute right-4 px-4 py-2 rounded-xl bg-[#22023a] text-[#E673AC] font-bold hover:bg-[#E673AC] hover:text-[#22023a] shadow transition border border-[#E673AC]">
           Add
         </button>
       </div>
-      <div className="w-full mb-6">
+      <div className="w-full mb-3">
         <input
           type="text"
-          className="w-full border-2 border-[#469110] rounded-lg p-2 text-xl focus:ring-2 focus:ring-[#E673AC] outline-none"
+          className="w-full border-2 border-[#E673AC] rounded-lg p-2 text-xl focus:ring-2 focus:ring-[#E673AC] outline-none bg-[#22023a] text-[#E673AC] placeholder-[#E673AC]/60"
           placeholder="Search Memory"
         />
       </div>
       <div className="grid grid-cols-2 gap-5">
         {memories.map((mem) => (
           <div
-            className="col-span-1 bg-white rounded-xl shadow border border-[#E673AC]/30 p-3 flex flex-col items-center"
+            className="col-span-1 rounded-xl shadow  flex flex-col items-center"
             key={mem.id}
           >
             <img src={mem.thumbnail} className="rounded-xl w-full mb-2" />
-            <div className="w-full text-center">
-              <h2 className="text-lg text-[#00520A]">
-                {mem.date.toLocaleDateString()}
-              </h2>
-              <h2 className="text-xl font-bold text-[#469110]">{mem.title}</h2>
+            <div className="w-full">
+              <h2 className="text-xl font-sm text-[#E673AC]">{mem.title}</h2>
             </div>
           </div>
         ))}
