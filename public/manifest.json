@@ -1,0 +1,21 @@
+{
+  "name": "Kironji",
+  "short_name": "Kironji",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#22023a",
+  "theme_color": "#E673AC",
+  "description": "A beautiful, app-like PWA experience for Kironji.",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
