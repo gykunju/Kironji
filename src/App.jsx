@@ -12,7 +12,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className="bg-[#161313] min-h-screen text-[#88BDF2] overflow-x-hidden">
+    <div className="bg-[#22023a] min-h-screen text-[#88BDF2] overflow-x-hidden">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
