@@ -9,7 +9,7 @@ import { IoChatbubbleEllipsesOutline, IoChatbubbleEllipsesSharp  } from "react-i
 function Navigation() {
   return (
     <div className="items-center">
-      <nav className="fixed bottom-0 z-1 flex justify-between w-full pb-6 items-center bg-[#22023a] text-white font-medium shadow-2xl">
+      <nav className="fixed bottom-0 z-1 flex justify-between w-full pb-6 pt-2 items-center bg-[#22023a] text-white font-medium shadow-2xl">
         <NavLink
           to="/"
           className="flex flex-col items-center flex-1"

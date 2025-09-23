@@ -83,7 +83,7 @@ function Chats() {
     <div className="bg-[#22023a] min-h-screen gap-3 p-6 pb-24">
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 w-full bg-[#22023a] z-10 shadow py-4 px-6">
-        <h1 className="text-center text-3xl font-bold text-[#E673AC]">Chats</h1>
+        <h1 className="text-center text-2xl font-bold text-[#E673AC]">Chats</h1>
       </div>
       {/* Add top margin to prevent overlap */}
       <div className="flex flex-col gap-5 mt-16">

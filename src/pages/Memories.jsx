@@ -55,10 +55,10 @@ function Memories() {
   return (
     <div className="min-h-screen flex flex-col pb-24 p-6 gap-3 bg-[#22023a]">
       <div className="flex justify-center items-center mb-6">
-        <h1 className="text-3xl font-bold text-[#E673AC] text-center drop-shadow">
+        <h1 className="text-2xl font-bold text-[#E673AC] text-center drop-shadow">
           Memories
         </h1>
-        <button className="ml-4 absolute right-4 px-4 py-2 rounded-xl bg-[#22023a] text-[#E673AC] font-bold hover:bg-[#E673AC] hover:text-[#22023a] shadow transition border border-[#E673AC]">
+        <button className="ml-4 text-md absolute right-4 px-4 py-2 rounded-xl bg-[#22023a] text-[#E673AC] font-bold hover:bg-[#E673AC] hover:text-[#22023a] shadow transition border border-[#E673AC]">
           Add
         </button>
       </div>
@@ -72,12 +72,12 @@ function Memories() {
       <div className="grid grid-cols-2 gap-5">
         {memories.map((mem) => (
           <div
-            className="col-span-1 rounded-xl shadow  flex flex-col items-center"
+            className="col-span-1 rounded-xl flex flex-col items-center"
             key={mem.id}
           >
             <img src={mem.thumbnail} className="rounded-xl w-full mb-2" />
             <div className="w-full">
-              <h2 className="text-xl font-sm text-[#E673AC]">{mem.title}</h2>
+              <h2 className="text-md font-sm text-[#E673AC]">{mem.title}</h2>
             </div>
           </div>
         ))}
