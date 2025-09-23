@@ -1,10 +1,10 @@
 {
   "name": "Kironji",
   "short_name": "Kironji",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#22023a",
-  "theme_color": "#E673AC",
+  "theme_color": "#22023a",
   "description": "A beautiful, app-like PWA experience for Kironji.",
   "icons": [
     {
