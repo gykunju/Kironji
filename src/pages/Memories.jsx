@@ -1,4 +1,5 @@
 import coffee from "../assets/macchiato.png";
+import '../App.css'
 
 function Memories() {
   const memories = [
@@ -53,7 +54,7 @@ function Memories() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col pb-24 p-6 gap-3 bg-[#22023a]">
+    <div className="min-h-screen flex flex-col pb-24 p-6 gap-3 bg-[#22023a] ">
       <div className="flex justify-center items-center mb-6">
         <h1 className="text-2xl font-bold text-[#E673AC] text-center drop-shadow">
           Memories
@@ -69,7 +70,7 @@ function Memories() {
           placeholder="Search Memory"
         />
       </div>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-5 overflow-y-auto vertical-scroll">
         {memories.map((mem) => (
           <div
             className="col-span-1 rounded-xl flex flex-col items-center"

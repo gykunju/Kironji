@@ -53,14 +53,6 @@ function Home() {
             alt="Profile"
           />
         </div>
-        {/* <div className="flex flex-col items-center">
-          <h1 className="text-2xl font-bold text-[#E673AC] drop-shadow tracking-wide">
-            Welcome!
-          </h1>
-          <span className="text-base text-[#a06b9a] font-medium mt-1">
-            Have a beautiful day ✨
-          </span>
-        </div> */}
         <div className="text-md text-[#E673AC] font-semibold cursor-pointer hover:text-[#22023a] hover:bg-[#E673AC]/20 px-4 py-2 rounded-xl transition border border-[#E673AC]/30 shadow-sm">
           Logout
         </div>
