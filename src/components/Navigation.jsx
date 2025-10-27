@@ -9,7 +9,7 @@ import { IoChatbubbleEllipsesOutline, IoChatbubbleEllipsesSharp  } from "react-i
 function Navigation() {
   return (
     <div className="items-center">
-      <nav className="fixed bottom-0 z-1 flex justify-between w-full pb-6 pt-2 items-center bg-[#22023a] text-white font-medium shadow-2xl">
+      <nav className="fixed bottom-0 z-50 flex justify-between w-full pb-6 pt-4 items-center bg-gradient-to-t from-[#1A1625] via-[#1A1625] to-transparent text-white font-medium shadow-2xl backdrop-blur-sm border-t border-[#C9A961]/20">
         <NavLink
           to="/"
           className="flex flex-col items-center flex-1"
@@ -18,15 +18,15 @@ function Navigation() {
           {({ isActive }) => (
             <>
               {isActive ? (
-                <GoHomeFill size={26} className="text-[#E673AC]" />
+                <GoHomeFill size={26} className="text-[#C9A961]" />
               ) : (
-                <GoHome size={26} />
+                <GoHome size={26} className="text-[#B8B8C8]" />
               )}
               <span
                 className={
                   isActive
-                    ? "text-[#E673AC] text-xs font-bold"
-                    : "text-white text-xs"
+                    ? "text-[#C9A961] text-xs font-semibold"
+                    : "text-[#B8B8C8] text-xs font-medium"
                 }
               >
                 Home
@@ -42,15 +42,15 @@ function Navigation() {
           {({ isActive }) => (
             <>
               {isActive ? (
-                <BsCalendar2EventFill size={24} className="text-[#E673AC]" />
+                <BsCalendar2EventFill size={24} className="text-[#C9A961]" />
               ) : (
-                <BsCalendar2Event size={24} />
+                <BsCalendar2Event size={24} className="text-[#B8B8C8]" />
               )}
               <span
                 className={
                   isActive
-                    ? "text-[#E673AC] text-xs font-bold"
-                    : "text-white text-xs"
+                    ? "text-[#C9A961] text-xs font-semibold"
+                    : "text-[#B8B8C8] text-xs font-medium"
                 }
               >
                 Events
@@ -68,16 +68,16 @@ function Navigation() {
               {isActive ? (
                 <IoChatbubbleEllipsesSharp
                   size={24}
-                  className="text-[#E673AC]"
+                  className="text-[#C9A961]"
                 />
               ) : (
-                <IoChatbubbleEllipsesOutline size={24} />
+                <IoChatbubbleEllipsesOutline size={24} className="text-[#B8B8C8]" />
               )}
               <span
                 className={
                   isActive
-                    ? "text-[#E673AC] text-xs font-bold"
-                    : "text-white text-xs"
+                    ? "text-[#C9A961] text-xs font-semibold"
+                    : "text-[#B8B8C8] text-xs font-medium"
                 }
               >
                 Chats
@@ -93,15 +93,15 @@ function Navigation() {
           {({ isActive }) => (
             <>
               {isActive ? (
-                <IoImages size={24} className="text-[#E673AC]" />
+                <IoImages size={24} className="text-[#C9A961]" />
               ) : (
-                <IoImagesOutline size={24} />
+                <IoImagesOutline size={24} className="text-[#B8B8C8]" />
               )}
               <span
                 className={
                   isActive
-                    ? "text-[#E673AC] text-xs font-bold"
-                    : "text-white text-xs"
+                    ? "text-[#C9A961] text-xs font-semibold"
+                    : "text-[#B8B8C8] text-xs font-medium"
                 }
               >
                 Memories
@@ -117,15 +117,15 @@ function Navigation() {
           {({ isActive }) => (
             <>
               {isActive ? (
-                <TbJewishStarFilled size={24} className="text-[#E673AC]" />
+                <TbJewishStarFilled size={24} className="text-[#C9A961]" />
               ) : (
-                <TbJewishStar size={24} />
+                <TbJewishStar size={24} className="text-[#B8B8C8]" />
               )}
               <span
                 className={
                   isActive
-                    ? "text-[#E673AC] text-xs font-bold"
-                    : "text-white text-xs"
+                    ? "text-[#C9A961] text-xs font-semibold"
+                    : "text-[#B8B8C8] text-xs font-medium"
                 }
               >
                 WishList

@@ -1,28 +1,62 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { AuthProvider, useAuth } from './contexts/AuthContext'
+import ProtectedRoute from './components/ProtectedRoute'
 import Home from './pages/Home'
 import Events from './pages/Events'
 import Memories from './pages/Memories'
 import WishList from './pages/WishList'
 import Chats from './pages/Chats'
-import Navigation from './components/Navigation' 
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
+import Navigation from './components/Navigation'
 import './App.css'
 
-
-function App() {
+function AppRoutes() {
+  const { user } = useAuth()
 
   return (
-    <div className="bg-[#22023a] min-h-screen text-[#88BDF2] overflow-x-hidden">
+    <div className="bg-[#1A1625] min-h-screen text-[#F8F6F1] overflow-x-hidden">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/memories" element={<Memories />} />
-        <Route path="/wishlist" element={<WishList />} />
-        <Route path="/chats" element={<Chats />} />
+        <Route path="/signin" element={user ? <Navigate to="/" replace /> : <SignIn />} />
+        <Route path="/signup" element={user ? <Navigate to="/" replace /> : <SignUp />} />
+
+        <Route path="/" element={
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        } />
+        <Route path="/events" element={
+          <ProtectedRoute>
+            <Events />
+          </ProtectedRoute>
+        } />
+        <Route path="/memories" element={
+          <ProtectedRoute>
+            <Memories />
+          </ProtectedRoute>
+        } />
+        <Route path="/wishlist" element={
+          <ProtectedRoute>
+            <WishList />
+          </ProtectedRoute>
+        } />
+        <Route path="/chats" element={
+          <ProtectedRoute>
+            <Chats />
+          </ProtectedRoute>
+        } />
       </Routes>
-      <Navigation />
+      {user && <Navigation />}
     </div>
-  );
+  )
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <AppRoutes />
+    </AuthProvider>
+  )
 }
 
 export default App
